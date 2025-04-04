@@ -1,0 +1,17 @@
+- DO NOT use TypeScript
+- use vue3 syntax to build this project
+- use vite to build this project
+  - use sass as css preprocessor,  use api setting "modern-compiler" with the sass-embedded package
+- use pnpm as package manager
+- use prettier to format the code, .prettierrc.json is the config file
+- use eslint to check the code, eslint.config.js is the config file
+
+- when code `.vue` file:
+  - always use `<script setup>` syntax
+  - always use `<style lang="scss" module="cn">` syntax
+  - when coding in component template:
+    - always use `refRootEle` to declare a reference variable for the root element
+    - the order of attributes appearing in the single component template is: [ref, v-if, v-for, v-model, v-bind, v-on, other attributes]
+    - the event handler function should be declared at the end of the component template, and the name of the event handler function should be the same as the name of the event, but with the prefix `handle`
+    
+
