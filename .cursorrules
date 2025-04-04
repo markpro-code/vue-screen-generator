@@ -10,7 +10,9 @@
 - when code `.vue` file:
   - code blocks follow the following order: template, script, style
   - always use `<script setup>` syntax
-  - always use `<style lang="scss" module="cn">` syntax
+  - when coding style:
+    - always use `<style lang="scss" module="cn">` syntax
+    - class name should using snake_case
   - when coding in component template:
     - always use `refRootEle` to declare a reference variable for the root element
     - the order of attributes appearing in the single component template is: [ref, v-if, v-for, v-model, v-bind, v-on, other attributes]
