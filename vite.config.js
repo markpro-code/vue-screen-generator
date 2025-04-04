@@ -2,6 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
+import VueMcp from 'vite-plugin-vue-mcp'
 
 const resolve = (p) => fileURLToPath(new URL(p, import.meta.url))
 
@@ -12,6 +13,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue(), //
       vueJsx(),
+      VueMcp(),
     ],
     resolve: {
       alias: {

@@ -5,8 +5,10 @@
 - use pnpm as package manager
 - use prettier to format the code, .prettierrc.json is the config file
 - use eslint to check the code, eslint.config.js is the config file
+- file name always using kebab-case
 
 - when code `.vue` file:
+  - code blocks follow the following order: template, script, style
   - always use `<script setup>` syntax
   - always use `<style lang="scss" module="cn">` syntax
   - when coding in component template:
@@ -15,3 +17,4 @@
     - the event handler function should be declared at the end of the component template, and the name of the event handler function should be the same as the name of the event, but with the prefix `handle`
     
 
+- do not commit file changes to git unless I explicitly ask you to do so.
