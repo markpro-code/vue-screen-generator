@@ -28,6 +28,7 @@ lib
 *.njsproj
 *.sln
 *.sw?
+.cursorrules
 
 # Environment
 .env
