@@ -7,23 +7,32 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "reset": "rm -rf node_modules && pnpm install"
+    "reset": "rm -rf node_modules && pnpm install",
+    "test": "vitest -c ./vitest.config.js",
+    "test:coverage": "vitest run -c ./vitest.config.js --coverage",
+    "test:ui": "vitest -c ./vitest.config.js --ui"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "@vitest/coverage-v8": "^3.1.1",
     "@vue/compiler-sfc": "^3.5.13",
     "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/test-utils": "^2.4.6",
+    "ajv": "^8.17.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.23.0",
     "eslint-plugin-vue": "^10.0.0",
+    "jsdom": "^26.0.0",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "sass-embedded": "^1.86.3",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vitest": "^3.1.1"
   }
 }
