@@ -15,6 +15,10 @@ export default class ComponentManager {
   }
 
   getComponent(name) {
-    return this.#componentMap.get(name)
+    const comp = this.#componentMap.get(name)
+    if (comp == null) {
+      console.error(`Component ${name} not found`)
+    }
+    return comp
   }
 }

@@ -4,7 +4,7 @@
       <Desinger />
     </div>
     <div :class="cn.right_panel">
-      <Renderer />
+      <Renderer :config="config" />
     </div>
   </div>
 </template>
@@ -13,6 +13,7 @@
 import Desinger from '@/desinger/index.vue'
 import Renderer from '@/renderer/index.vue'
 import { ref } from 'vue'
+import config from './screen-configs/demo.json'
 
 const refRootEle = ref(null)
 </script>

@@ -1,14 +1,18 @@
+import Ajv from 'ajv'
+
+const ajv = new Ajv()
+
 // ajv style component define schema
 const schema = {
   $id: 'component-define',
   type: 'object',
   properties: {
     // component common properties
-    commonProps: {
+    commons: {
       type: 'object',
-      required: ['id', 'type'],
+      required: ['nodeId', 'type'],
       properties: {
-        id: {
+        nodeId: {
           type: 'string',
         },
         name: {
@@ -21,8 +25,20 @@ const schema = {
     },
 
     // component custom properties
-    props: {
+    properties: {
       type: 'object',
+    },
+
+    // component event handlers
+    events: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+          handler: { type: 'string' },
+        },
+      },
     },
 
     // component slots
@@ -40,4 +56,6 @@ const schema = {
   },
 }
 
-export default schema
+export const validateComponent = ajv.compile(schema)
+export const validateCommonProps = ajv.compile(schema.properties.commons)
+export const validateSlots = ajv.compile(schema.properties.slots)

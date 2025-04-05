@@ -1,0 +1,27 @@
+{
+  "commonProps": {
+    "id": "screen-93763378-e535-460f-b428-efb89a59ae48",
+    "type": "screen"
+  },
+  "props": {},
+  "slots": {
+    "default": [
+      {
+        "commonProps": {
+          "id": "div-6cd42ec3-8722-4393-85f2-7138311de8e6",
+          "type": "div"
+        },
+        "props": {},
+        "slots": {}
+      },
+      {
+        "commonProps": {
+          "id": "div-12345678-9012-3456-7890-123456789012",
+          "type": "div"
+        },
+        "props": {},
+        "slots": {}
+      }
+    ]
+  }
+}
